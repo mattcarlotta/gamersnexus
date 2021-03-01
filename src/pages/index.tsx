@@ -21,9 +21,9 @@ const Home: NextPage = () => (
     <Header title="Home" url="/" />
     <PageContainer>
       <img
-        style={{ marginBottom: "10px", width: "100%" }}
-        src="/images/nextjsKit.png"
-        alt="ssrLogoLight.png"
+        style={{ marginBottom: "10px" }}
+        src="/images/gnLogo.png"
+        alt="gnLogo.png"
       />
       <SubTitle>Edit files in the root directory and save to reload.</SubTitle>
       <Link href="/users">

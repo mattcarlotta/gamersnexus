@@ -32,7 +32,9 @@ export const GlobalStylesheet = (): JSX.Element => (
         font-family: "Poppins Light", -apple-system, BlinkMacSystemFont,
           "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
           "Droid Sans", "Helvetica Neue", sans-serif;
-        background-color: #f0f0f0;
+        color: #ccc;
+        font-size: 15px;
+        background: url(/images/body_bg.png) #1e1e1e;
       }
 
       .Toastify__toast--info {

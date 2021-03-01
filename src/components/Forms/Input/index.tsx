@@ -6,11 +6,11 @@ import { InputProps } from "~types";
 
 const InputField = styled.input<{ errors?: string }>`
   text-indent: 10px;
-  height: 40px;
+  height: 100%;
   width: 100%;
   background: #f5f5f5;
   color: #3a3a3a;
-  border: 1px solid ${({ errors }) => (errors ? "#d03916" : "#d3d3d3")};
+  border: 1px solid ${({ errors }) => (errors ? "#d03916" : "#ccc")};
   border-radius: 4px;
   transition: 0.2s ease-in-out;
   transition-property: color, border;
@@ -54,13 +54,14 @@ const InputComponent = ({
   </div>
 );
 
-const Input = styled(InputComponent)`
+const Input = styled(InputComponent)<{ width?: string; height?: string }>`
   @media (max-width: 768px) {
     display: block !important;
     width: 100% !important;
   }
 
-  height: 105px;
+  height: ${({ height }) => height || "auto"};
+  width: ${({ width }) => width || "auto"};
   padding: 0 10px;
   display: flex;
   flex-direction: column;
