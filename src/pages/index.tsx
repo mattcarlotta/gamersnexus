@@ -1,44 +1,32 @@
 import * as React from "react";
-import styled from "@emotion/styled";
-import { FaCoffee } from "react-icons/fa";
-import Center from "~components/Layout/Center";
+import Flex from "~components/Layout/Flex";
 import Link from "~components/Navigation/Link";
 import SubTitle from "~components/Layout/SubTitle";
 import Header from "~components/Navigation/Header";
 import { NextPage } from "~types";
 
-const PageContainer = styled.div`
-  max-width: 850px;
-  width: 100%;
-  padding-top: 25vh;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-`;
-
 const Home: NextPage = () => (
-  <Center data-testid="home-page" style={{ height: "100%", color: "#0076ff" }}>
+  <>
     <Header title="Home" url="/" />
-    <PageContainer>
+    <Flex
+      data-testid="not-found-page"
+      justify="center"
+      direction="column"
+      height="80vh"
+    >
       <img
-        style={{ marginBottom: "10px" }}
+        style={{ marginBottom: "10px", width: "625px" }}
         src="/images/gnLogo.png"
         alt="gnLogo.png"
       />
-      <SubTitle>Edit files in the root directory and save to reload.</SubTitle>
-      <Link href="/users">
-        <FaCoffee
-          style={{
-            position: "relative",
-            top: 6,
-            fontSize: 23,
-            marginRight: 6
-          }}
-        />
-        See Example
+      <SubTitle>
+        PC hardware reviews, game benchmarks, and component analysis.
+      </SubTitle>
+      <Link secondary href="/news">
+        View Latest News
       </Link>
-    </PageContainer>
-  </Center>
+    </Flex>
+  </>
 );
 
 export default Home;

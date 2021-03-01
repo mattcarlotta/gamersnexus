@@ -1,16 +1,11 @@
-import { ContainerProps } from "~types";
-import CardWrapper from "./CardWrapper";
-import ContainerWrapper from "./ContainerWrapper";
+import styled from "@emotion/styled";
 
-const Container = ({
-  children,
-  dataTestId,
-  innerStyle,
-  style
-}: ContainerProps): JSX.Element => (
-  <ContainerWrapper data-testid={dataTestId} style={style}>
-    <CardWrapper style={innerStyle}>{children}</CardWrapper>
-  </ContainerWrapper>
-);
+const Container = styled.div`
+  padding-top: 80px;
+  margin: 0px auto;
+  height: 100%;
+  max-width: 1200px;
+  width: 100%;
+`;
 
 export default Container;

@@ -11,6 +11,7 @@ const LinkComponent = ({ children, className, href }: LinkProps) => (
 );
 
 const Link = styled(LinkComponent)<{
+  active?: boolean;
   display?: string;
   color?: string;
   background?: string;
@@ -21,27 +22,64 @@ const Link = styled(LinkComponent)<{
   margin?: string;
   padding?: string;
   primary?: boolean;
+  secondary?: boolean;
 }>`
   display: ${({ display }) => display};
   cursor: pointer;
-  color: ${({ primary }) => (primary ? "#0076ff" : "#fff")};
+  color: ${({ active, primary, secondary }) => {
+    if (active) return "#0076ff";
+    if (primary) return "#fff";
+    if (secondary) return "#fff";
+    return "#fff";
+  }};
   font-size: 16px;
   text-align: center;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: ${({ primary }) => (primary ? "transparent" : "#0076ff")};
-  border: ${({ primary }) => (primary ? "0" : "1px solid #0076ff")};
-  box-shadow: ${({ primary }) =>
-    primary ? "none" : " 0 4px 14px 0 rgba(0, 118, 255, 0.39)"};
+  background: ${({ active, primary, secondary }) => {
+    if (active) return "#d7eaff";
+    if (primary) return "#transparent";
+    if (secondary) return "#015eca";
+    return "#0076ff";
+  }};
+  border: ${({ primary, secondary }) => {
+    if (primary) return "1px solid transparent";
+    if (secondary) return "1px solid #0076ff";
+    return "1px solid #0076ff";
+  }};
+  box-shadow: ${({ primary, secondary }) => {
+    if (primary) return "none";
+    if (secondary) return "0 4px 14px 0 rgba(0, 119, 255, 0.452)";
+    return "0 4px 14px 0 rgba(0, 118, 255, 0.39)";
+  }};
   padding: ${({ padding }) => padding || "10px 40px"};
   border-radius: ${({ borderradius }) => borderradius || "4px"};
   margin: ${({ margin }) => margin || "0px"};
   font-weight: 500;
 
   :hover {
-    background: ${({ primary }) => (primary ? "#ddd" : "#fff")};
-    color: #0076ff;
+    background: ${({ primary, secondary }) => {
+      if (primary) return "#d7eaff";
+      if (secondary) return "#0076ff";
+      return "#ddd";
+    }};
+    border: ${({ active, primary, secondary }) => {
+      if (active) return "1px solid #8caffb";
+      if (primary) return "1px solid transparent";
+      if (secondary) return "1px solid #0076ff";
+      return "1px solid #0076ff";
+    }};
+    color: ${({ primary, secondary }) => {
+      if (primary) return "#0076ff";
+      if (secondary) return "#fff";
+      return "#fff";
+    }};
+    box-shadow: ${({ primary, secondary }) => {
+      if (primary) return "none";
+      if (secondary) return "0 4px 14px 0 rgba(0, 119, 255, 0.452)";
+      return "0 4px 14px 0 rgba(0, 118, 255, 0.39)";
+    }};
   }
 
   :focus {
