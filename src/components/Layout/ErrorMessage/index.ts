@@ -1,10 +1,9 @@
 import styled from "@emotion/styled";
 
 const ErrorMessage = styled.div`
-  font-size: 32px;
+  font-size: 16px;
   font-weight: bold;
-  margin-top: -5px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   letter-spacing: 2px;
 `;
 

@@ -1,9 +1,9 @@
-import Head from "next/head";
 import Center from "~components/Layout/Center";
 import ErrorMessage from "~components/Layout/ErrorMessage";
 import ErrorStatus from "~components/Layout/ErrorStatus";
 import Flex from "~components/Layout/Flex";
 import HomeIcon from "~components/Layout/HomeIcon";
+import Header from "~components/Navigation/Header";
 import Link from "~components/Navigation/Link";
 import { NextPage } from "~types";
 
@@ -11,25 +11,31 @@ const NotFound: NextPage = () => (
   <Flex
     data-testid="not-found-page"
     justify="center"
-    style={{ height: "90vh" }}
+    style={{ height: "80vh" }}
     id="notfound"
   >
-    <Head>
-      <title>Not Found - NextJS SSR Kit</title>
-    </Head>
+    <Header title="Not Found" />
     <Center
       style={{
-        color: "#03a9f3",
-        background: "#fff",
+        color: "#fff",
+        background: "#0076ff",
         boxShadow: "0 4px 14px 0 rgba(130, 130, 130, 0.19)",
-        padding: 40
+        padding: 40,
+        borderRadius: 4
       }}
     >
-      <ErrorStatus>404</ErrorStatus>
-      <ErrorMessage>Uh Oh! Page not found!</ErrorMessage>
-      <Link href="/">
+      <img
+        style={{ marginBottom: "10px", width: "625px" }}
+        src="/images/gnLogo.png"
+        alt="gnLogo.png"
+      />
+      <ErrorStatus>Page Not Found</ErrorStatus>
+      <ErrorMessage>
+        We&#39;re sorry, but the page you&#39;ve requested was not found.
+      </ErrorMessage>
+      <Link tertiary href="/" replace>
         <HomeIcon />
-        <span>Go Back</span>
+        <span>Go Home</span>
       </Link>
     </Center>
   </Flex>

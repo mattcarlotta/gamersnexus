@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
 
 const Container = styled.div`
-  padding-top: 80px;
+  padding-top: 110px;
   margin: 0px auto;
   height: 100%;
-  max-width: 1200px;
+  max-width: 800px;
   width: 100%;
 `;
 

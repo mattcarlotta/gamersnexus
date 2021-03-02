@@ -49,6 +49,18 @@ export const GlobalStylesheet = (): JSX.Element => (
         filter: blur(4px);
       }
 
+      @keyframes pulse {
+        0% {
+          background-color: #eee;
+        }
+        50% {
+          background-color: #e4e4e4;
+        }
+        100% {
+          background-color: #eee;
+        }
+      }
+
       ::-moz-focus-inner {
         border: 0;
       }
