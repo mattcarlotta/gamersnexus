@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
-const SubHeader = styled.div`
-  cursor: pointer;
+const SubHeader = styled.div<{ nohover?: boolean }>`
+  cursor: ${({ nohover }) => (nohover ? "default" : "pointer")};
   margin-top: 20px;
   margin-bottom: -10px;
   font-size: 20px;
@@ -11,7 +11,7 @@ const SubHeader = styled.div`
   color: #0076ff;
 
   :hover {
-    text-decoration: underline;
+    text-decoration: ${({ nohover }) => !nohover && "underline"};
   }
 `;
 

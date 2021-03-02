@@ -44,9 +44,10 @@ const UserCard = ({
               max-width: 55px;
               display: block;
               margin-right: 10px;
+              border-radius: 50px;
             `}
-            src={avatar}
-            alt="avatar.png"
+            src={`/images/${avatar}`}
+            alt={avatar}
           />
         ) : (
           <FaUserCircle style={{ marginRight: 10, fontSize: 55 }} />

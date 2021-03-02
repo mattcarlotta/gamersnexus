@@ -15,7 +15,12 @@ const LoadingUserCard = (): JSX.Element => (
           align-items: center;
         `}
       >
-        <LoadingItem height="55px" margin="0 10px 0 0" width="55px" />
+        <LoadingItem
+          height="55px"
+          margin="0 10px 0 0"
+          width="55px"
+          borderradius="50px"
+        />
         <div
           css={css`
             display: flex;

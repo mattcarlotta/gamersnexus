@@ -15,15 +15,16 @@ const Tag = styled.div`
   padding: 2px 4px;
   font-size: 12px;
   border-radius: 5px;
-  color: #009eff;
-  background: #e6f7ff;
-  border: 1px solid #91d5ff;
+  color: #fff;
+  background: #2c8bf6;
+  border: 1px solid #2c8bf6;
   line-height: 20px;
   white-space: nowrap;
   height: 100%;
+  transition: all 250ms ease-in-out;
 
   :hover {
-    color: #096dd9;
+    background: #096dd9;
   }
 `;
 
@@ -37,7 +38,7 @@ const Tags = ({ types }: TagProps): JSX.Element => (
         padding="0"
         texttransform="none"
         key={type}
-        href={`/news/${type
+        href={`/tag/${type
           .trim()
           .toLowerCase()
           .replace(/[^\w\s]/gi, "")
