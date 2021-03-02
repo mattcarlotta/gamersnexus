@@ -10,7 +10,7 @@ const Header = ({
   url
 }: HeaderProps): JSX.Element => (
   <Head>
-    <title>{title} - GamersNexus</title>
+    <title>{title} - Gamers Nexus</title>
     <link rel="canonical" href={`${CLIENT}${url}`} />
     <meta name="description" content={description} />
     <meta property="og:description" content={description} />

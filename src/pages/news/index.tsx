@@ -11,6 +11,7 @@ import PostMeta from "~components/Layout/PostMeta";
 import TextAlign from "~components/Layout/TextAlign";
 import Link from "~components/Navigation/Link";
 import Header from "~components/Navigation/Header";
+import OutsideLink from "~components/Navigation/OutsideLink";
 
 const NewsPage = (): JSX.Element => (
   <>
@@ -42,6 +43,7 @@ const NewsPage = (): JSX.Element => (
             <Link
               normal
               fontsize="30px"
+              fontweight="600"
               href="/news/3643/hw-news-rx-6700-xt-3dfx-voodoo"
             >
               AMD RX 6700 XT Announcment, 3DFX Voodoo Mod, Hardware Unboxed YT
@@ -67,8 +69,19 @@ const NewsPage = (): JSX.Element => (
                 <Paragraph>
                   We also have news on the AMD RX 6700 XT, Fry’s Electronics
                   ceasing operations, HP acquiring HyperX, and more. At GN, we
-                  recently reviewed Nvidia’s RTX 3060, Fractal’s Meshify 2 case,
-                  and revisited the GTX 960 in 2021.
+                  recently reviewed{" "}
+                  <OutsideLink href="https://www.youtube.com/watch?v=3C-RoDtqdJ8">
+                    Nvidia’s RTX 3060
+                  </OutsideLink>
+                  ,
+                  <OutsideLink href="https://www.youtube.com/watch?v=94l1c5dMRX8">
+                    Fractal’s Meshify 2 case
+                  </OutsideLink>
+                  ,
+                  <OutsideLink href="https://www.youtube.com/watch?v=rPRqlg6l1ls">
+                    and revisited the GTX 960 in 2021
+                  </OutsideLink>
+                  .
                 </Paragraph>
                 <Paragraph>
                   As always, video embed and article follow below.
@@ -105,6 +118,7 @@ const NewsPage = (): JSX.Element => (
               normal
               stopPropagation
               fontsize="30px"
+              fontweight="600"
               href="/news/3642/hw-news-amd-usb-dropout-disconnection-response-intel-11600k"
             >
               AMD on USB Dropout Issues, Intel i5-11600K Leaks, NVIDIA vs.
@@ -113,7 +127,7 @@ const NewsPage = (): JSX.Element => (
             <PostMeta
               username="Eric Hamilton"
               views={0}
-              date={String(new Date(2021, 2, 1, 3, 30, 0, 0))}
+              date={String(new Date(2021, 1, 21, 19, 12, 0, 0))}
               showViews
             />
             <ImageContainer src="/images/amd.jpg" alt="amd.jpg" />

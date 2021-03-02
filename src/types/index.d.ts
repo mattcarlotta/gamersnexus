@@ -7,7 +7,8 @@ import {
   CSSProperties,
   FC,
   FormEvent,
-  ReactNode
+  ReactNode,
+  RefObject
 } from "react";
 import { AnyAction, Store } from "redux";
 import { SagaIterator } from "redux-saga";
@@ -274,5 +275,6 @@ export {
   NextApiResponse,
   NextPage,
   ReactNode,
+  RefObject,
   SagaIterator
 };

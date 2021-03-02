@@ -1,7 +1,7 @@
-import { createRef, Component } from "react";
+import * as React from "react";
 import { DropdownClickHandlerProps, DropdownClickHandlerState } from "~types";
 
-class ClickHandler extends Component<
+class ClickHandler extends React.Component<
   DropdownClickHandlerProps,
   DropdownClickHandlerState
 > {
@@ -19,7 +19,7 @@ class ClickHandler extends Component<
     document.addEventListener("scroll", this.handleMenuScrollClose);
   }
 
-  wrapperRef = createRef<HTMLDivElement>();
+  wrapperRef = React.createRef<HTMLDivElement>();
 
   handleClickOutside = (event: Event): void => {
     if (

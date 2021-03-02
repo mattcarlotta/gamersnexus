@@ -29,6 +29,7 @@ const Link = styled(LinkComponent)<{
   borderradius?: string;
   boxshadow?: string;
   fontsize?: string;
+  fontweight?: string;
   height?: string;
   hoverbackground?: string;
   margin?: string;
@@ -84,7 +85,7 @@ const Link = styled(LinkComponent)<{
   border-radius: ${({ borderradius }) => borderradius || "4px"};
   margin: ${({ margin }) => margin || "0px"};
   height: ${({ height }) => height || "auto"};
-  font-weight: 500;
+  font-weight: ${({ fontweight }) => fontweight || "500"};
 
   :hover {
     background: ${({ normal, primary, secondary, tag, tertiary }) => {
