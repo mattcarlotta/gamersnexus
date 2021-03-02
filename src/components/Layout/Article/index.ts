@@ -16,6 +16,8 @@ const Article = styled.article<{
   margin-bottom: 40px;
   border-radius: 4px;
   overflow: hidden;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 `;
 
 export default Article;

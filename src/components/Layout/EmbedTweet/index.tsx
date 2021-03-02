@@ -1,3 +1,4 @@
+import { css } from "@emotion/react";
 import * as React from "react";
 import LoadingItem from "~components/Layout/LoadingItem";
 import OutsideLink from "~components/Navigation/OutsideLink";
@@ -35,7 +36,7 @@ export type Widgets = {
 export type TweetEmbedProps = {
   className?: string;
   id: string;
-  href: string;
+  user: string;
 };
 
 export type TweetEmbedState = {
@@ -43,14 +44,14 @@ export type TweetEmbedState = {
   error: string;
 };
 
-const TweetEmbed = ({ className, id, href }: TweetEmbedProps): JSX.Element => {
+const TweetEmbed = ({ className, id, user }: TweetEmbedProps): JSX.Element => {
   const tweetRef = React.useRef<HTMLDivElement>(null);
   const [state, setState] = React.useState<TweetEmbedState>({
     isLoading: true,
     error: ""
   });
   const { isLoading, error } = state;
-  const link = `https://twitter.com/${href}`;
+  const link = `https://twitter.com/${user}/status/${id}`;
 
   const renderTweet = React.useCallback((): void => {
     try {
@@ -76,7 +77,7 @@ const TweetEmbed = ({ className, id, href }: TweetEmbedProps): JSX.Element => {
         error: error.toString()
       });
     }
-  }, [id]);
+  }, []);
 
   React.useEffect(() => {
     const twttr = (window as any)["twttr"];
@@ -90,18 +91,24 @@ const TweetEmbed = ({ className, id, href }: TweetEmbedProps): JSX.Element => {
   return (
     <>
       <OutsideLink href={link}>{link}</OutsideLink>
-      <div className={className} ref={tweetRef}>
-        {error && <p>{error}</p>}
-        {isLoading && (
-          <LoadingItem
-            height="550px"
-            width="545px"
-            borderradius="15px"
-            padding="10px 15px 15px 5px"
-            margin="10px 0"
-          />
-        )}
-      </div>
+      {isLoading ? (
+        <LoadingItem
+          height="550px"
+          width="545px"
+          borderradius="15px"
+          padding="10px 15px 15px 5px"
+          margin="10px 0"
+        />
+      ) : error ? (
+        <p
+          css={css`
+            color: red;
+          `}
+        >
+          {error}
+        </p>
+      ) : null}
+      <div className={className} ref={tweetRef} />
     </>
   );
 };

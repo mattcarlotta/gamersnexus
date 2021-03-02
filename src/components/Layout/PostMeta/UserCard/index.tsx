@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { FaUser } from "react-icons/fa";
+import { FaUserCircle } from "react-icons/fa";
 import Flex from "~components/Layout/Flex";
 import MaskPreview from "~components/Layout/MaskPreview";
 import Link from "~components/Navigation/Link";
@@ -49,7 +49,7 @@ const UserCard = ({
             alt="avatar.png"
           />
         ) : (
-          <FaUser style={{ marginRight: 10, fontSize: 55 }} />
+          <FaUserCircle style={{ marginRight: 10, fontSize: 55 }} />
         )}
         <div
           css={css`

@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 const SubHeader = styled.div`
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: -10px;
   font-size: 20px;
   font-family: "Poppins Bold", -apple-system, BlinkMacSystemFont, "Segoe UI",

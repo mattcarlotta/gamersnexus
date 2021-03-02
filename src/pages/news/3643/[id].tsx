@@ -5,14 +5,16 @@ import EmbedTweet from "~components/Layout/EmbedTweet";
 import ImageContainer from "~components/Layout/ImageContainer";
 import Paragraph from "~components/Layout/Paragraph";
 import PostMeta from "~components/Layout/PostMeta";
+import Flex from "~components/Layout/Flex";
 import Quote from "~components/Layout/Quote";
 import SubHeader from "~components/Layout/SubHeader";
 import TextAlign from "~components/Layout/TextAlign";
-import Link from "~components/Navigation/Link";
 import Header from "~components/Navigation/Header";
+import Tags from "~components/Layout/Tags";
 import Title from "~components/Layout/Title";
 import OutsideLink from "~components/Navigation/OutsideLink";
-import YouTubeVideo from "~components/Layout/YouTubeVideo";
+import YoutubeVideo from "~components/Layout/YoutubeVideo";
+import { ChangeEvent } from "~types";
 
 export interface NewsArticleState {
   autoPlay: number;
@@ -27,7 +29,9 @@ const NewsArticle3643 = (): JSX.Element => {
     startTime: 0
   });
 
-  const handleSetTime = React.useCallback((time: number): void => {
+  const handleSetTime = React.useCallback((e: ChangeEvent<any>): void => {
+    const time = parseInt(e.target.dataset.value, 10);
+
     setState({
       startTime: time,
       autoPlay: 1
@@ -46,19 +50,8 @@ const NewsArticle3643 = (): JSX.Element => {
         url={router.asPath}
         title="AMD RX 6700 XT Announcement, 3DFX Voodoo Mod, Hardware Unboxed YT Issues"
       />
-      <Article padding="20px" direction="column">
-        <Link
-          tag
-          stopPropagation
-          borderradius="3px"
-          height="100%"
-          padding="5px"
-          margin="0 0 10px 0"
-          href="/news/hardware"
-        >
-          HW News
-        </Link>
-        <TextAlign center>
+      <Article padding="20px 40px" direction="column">
+        <Flex direction="column">
           <Title>
             AMD RX 6700 XT Announcment, 3DFX Voodoo Mod, Hardware Unboxed YT
             Issues
@@ -69,7 +62,8 @@ const NewsArticle3643 = (): JSX.Element => {
             date={String(new Date(2021, 2, 1, 3, 30, 0, 0))}
             showViews
           />
-        </TextAlign>
+          <Tags types={["AMD", "GPUs", "Video Cards", "Hardware", "Youtube"]} />
+        </Flex>
         <ImageContainer src="/images/gfxCard.jpg" alt="gfxCard.jpg" />
         <TextAlign left>
           <Paragraph>
@@ -100,9 +94,9 @@ const NewsArticle3643 = (): JSX.Element => {
             As always, video embed and article follow below.
           </Paragraph>
           <TextAlign center>
-            <YouTubeVideo {...state} innerRef={videoRef} id="IPxKmKA7V5o" />
+            <YoutubeVideo {...state} innerRef={videoRef} id="IPxKmKA7V5o" />
           </TextAlign>
-          <SubHeader onClick={() => handleSetTime(71)}>
+          <SubHeader data-value="71" onClick={handleSetTime}>
             01:11 | Quick GN x Cat Angels Update
           </SubHeader>
           <Paragraph>
@@ -148,7 +142,7 @@ const NewsArticle3643 = (): JSX.Element => {
             this community can be proud of, in between all the bickering about
             which GPU vendor is the most evil at any given time.
           </Paragraph>
-          <SubHeader onClick={() => handleSetTime(252)}>
+          <SubHeader data-value="252" onClick={handleSetTime}>
             04:12 | AMD RX 6700 XT Official Announcement Announced
           </SubHeader>
           <Paragraph>
@@ -169,12 +163,9 @@ const NewsArticle3643 = (): JSX.Element => {
           </Paragraph>
           <Paragraph>
             Source:
-            <EmbedTweet
-              id="1364636388453470210"
-              href="Radeon/status/1364636388453470210"
-            />
+            <EmbedTweet id="1364636388453470210" user="Radeon" />
           </Paragraph>
-          <SubHeader onClick={() => handleSetTime(350)}>
+          <SubHeader data-value="350" onClick={handleSetTime}>
             05:50 | Hardware Unboxed Shadowbanned on YouTube
           </SubHeader>
           <Paragraph>
@@ -244,10 +235,7 @@ const NewsArticle3643 = (): JSX.Element => {
             </OutsideLink>
             <br />
             Source:
-            <EmbedTweet
-              id="1365161458321948674"
-              href="HardwareUnboxed/status/1365161458321948674"
-            />
+            <EmbedTweet id="1365161458321948674" user="HardwareUnboxed" />
           </Paragraph>
         </TextAlign>
       </Article>
