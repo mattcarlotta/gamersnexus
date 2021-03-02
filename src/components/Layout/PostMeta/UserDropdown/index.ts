@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 
 const UserDropdown = styled.div<{ views?: number }>`
+  cursor: default;
   position: absolute;
   top: 0px;
   left: ${({ views }) => (views ? "57px" : "0px")};

@@ -69,7 +69,7 @@ class PostMeta extends React.Component<PostMetaProps, PostMetaState> {
           avatar: "",
           description:
             "Proin eget tortor risus. Nulla porttitor accumsan tincidunt. Sed porttitor lectus nibh. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta.",
-          username: "Eric Hamilton",
+          username: this.props.username,
           website: ""
         }
       });
@@ -96,7 +96,11 @@ class PostMeta extends React.Component<PostMetaProps, PostMetaState> {
     return (
       <div
         ref={this.postRef}
-        style={{ fontSize: 12, color: "#787C7E", position: "relative" }}
+        style={{
+          fontSize: 12,
+          color: "#787C7E",
+          position: "relative"
+        }}
       >
         <Details style={{ textAlign: "center" }}>
           {!!views && <>Posted by&nbsp;</>}
@@ -105,6 +109,7 @@ class PostMeta extends React.Component<PostMetaProps, PostMetaState> {
               display: inline;
               cursor: pointer;
             `}
+            onClick={e => e.stopPropagation()}
             onMouseEnter={this.setTimer}
             onMouseLeave={this.clearTimer}
           >

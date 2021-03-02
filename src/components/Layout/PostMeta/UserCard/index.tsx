@@ -19,7 +19,7 @@ const UserCard = ({
       padding: 12px;
     `}
   >
-    <Flex justify="left">
+    <Flex justify="left" style={{ marginBottom: 5 }}>
       {avatar ? (
         <img
           css={css`

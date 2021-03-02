@@ -41,7 +41,7 @@ const MaskPreview = ({
 };
 
 MaskPreview.defaultProps = {
-  maxHeight: 250,
+  maxHeight: 150,
   maskHeight: 10,
   minHeight: 1
 };

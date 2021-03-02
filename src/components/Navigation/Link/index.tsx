@@ -2,9 +2,19 @@ import NextLink from "next/link";
 import styled from "@emotion/styled";
 import { LinkProps } from "~types";
 
-const LinkComponent = ({ children, className, href, replace }: LinkProps) => (
+const LinkComponent = ({
+  children,
+  className,
+  href,
+  replace,
+  stopPropagation
+}: LinkProps) => (
   <NextLink href={href} prefetch={false} passHref replace={replace}>
-    <a data-testid="link" className={className}>
+    <a
+      data-testid="link"
+      onClick={stopPropagation ? e => e.stopPropagation() : undefined}
+      className={className}
+    >
       {children}
     </a>
   </NextLink>
@@ -23,6 +33,7 @@ const Link = styled(LinkComponent)<{
   margin?: string;
   padding?: string;
   normal?: boolean;
+  noglow?: boolean;
   primary?: boolean;
   secondary?: boolean;
   tertiary?: boolean;
@@ -57,8 +68,8 @@ const Link = styled(LinkComponent)<{
     if (tertiary) return "1px solid #1e1e1e";
     return "1px solid #0076ff";
   }};
-  box-shadow: ${({ normal, primary, secondary }) => {
-    if (normal) return "none";
+  box-shadow: ${({ noglow, normal, primary, secondary }) => {
+    if (noglow || normal) return "none";
     if (primary) return "none";
     if (secondary) return "0 4px 14px 0 rgba(0, 119, 255, 0.452)";
     return "0 4px 14px 0 rgba(0, 118, 255, 0.39)";
@@ -74,7 +85,7 @@ const Link = styled(LinkComponent)<{
       if (primary) return "#d7eaff";
       if (secondary) return "#0076ff";
       if (tertiary) return "#1e1e1e";
-      return "#ddd";
+      return "#015eca";
     }};
     border: ${({ active, normal, primary, secondary, tertiary }) => {
       if (active) return "1px solid #8caffb";
@@ -85,14 +96,14 @@ const Link = styled(LinkComponent)<{
       return "1px solid #0076ff";
     }};
     color: ${({ normal, primary, secondary, tertiary }) => {
-      if (normal) return "#015eca";
+      if (normal) return "#0076ff";
       if (primary) return "#0076ff";
       if (secondary) return "#fff";
       if (tertiary) return "#fff";
       return "#fff";
     }};
-    box-shadow: ${({ normal, primary, secondary }) => {
-      if (normal) return "none";
+    box-shadow: ${({ noglow, normal, primary, secondary }) => {
+      if (noglow || normal) return "none";
       if (primary) return "none";
       if (secondary) return "0 4px 14px 0 rgba(0, 119, 255, 0.452)";
       return "0 4px 14px 0 rgba(0, 118, 255, 0.39)";

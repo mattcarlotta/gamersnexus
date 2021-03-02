@@ -163,6 +163,7 @@ export type LinkProps = {
   className?: string;
   href: string;
   replace?: boolean;
+  stopPropagation?: boolean;
 };
 
 export type LoadingUsersProps = {

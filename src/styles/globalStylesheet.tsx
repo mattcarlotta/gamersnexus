@@ -49,6 +49,15 @@ export const GlobalStylesheet = (): JSX.Element => (
         filter: blur(4px);
       }
 
+      .tooltip-container.tooltip-container {
+        text-align: center;
+        box-shadow: 0px 8px 8px -2px rgba(0, 0, 0, 0.25);
+        background-color: rgba(0, 0, 0, 1);
+      }
+      .tooltip-arrow.tooltip-arrow {
+        color: rgba(0, 0, 0, 1);
+      }
+
       @keyframes pulse {
         0% {
           background-color: #eee;

@@ -1,8 +1,10 @@
 /* istanbul ignore file */
 import styled from "@emotion/styled";
 
-const Title = styled.h1`
-  margin: 5px;
+const Title = styled.div`
+  margin-bottom: 10px;
+  font-size: 50px;
+  color: #fff;
 `;
 
 export default Title;

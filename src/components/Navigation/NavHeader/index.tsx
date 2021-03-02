@@ -31,7 +31,7 @@ const HeaderComponent = ({ className }: HeaderProps): JSX.Element => {
   return (
     <header className={className}>
       <FlexStart>
-        <Link href="/" margin="0 30px 0 0" padding="0" borderradius="50px">
+        <Link href="/" margin="0 15px 0 0" padding="0" borderradius="50px">
           <img
             css={css`
               display: flex;
@@ -94,10 +94,10 @@ const HeaderComponent = ({ className }: HeaderProps): JSX.Element => {
 const Header = styled(HeaderComponent)`
   @media (max-width: 1200px) {
     position: fixed;
-    z-index: 2;
     width: 100%;
   }
 
+  z-index: 1000;
   display: flex;
   flex-direction: row;
   align-items: center;
