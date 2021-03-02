@@ -17,28 +17,30 @@ const NewsPage = (): JSX.Element => (
     <Header url="/news" title="News" />
     <Center>
       <Article>
+        <Flex>
+          <Link
+            tag
+            stopPropagation
+            borderradius="0"
+            height="100%"
+            padding="20px 10px"
+            href="/news/hardware"
+          >
+            HW News
+          </Link>
+        </Flex>
         <Button
           transparent
-          texttransform="none"
           padding="10px 15px"
+          texttransform="none"
           type="button"
           onClick={() =>
             Router.push("/news/3643/hw-news-rx-6700-xt-3dfx-voodoo")
           }
         >
-          <Link
-            secondary
-            noglow
-            stopPropagation
-            padding="4px 8px"
-            href="/news/hardware"
-          >
-            HW News
-          </Link>
           <Flex direction="column" padding="10px">
             <Link
               normal
-              stopPropagation
               fontsize="30px"
               href="/news/3643/hw-news-rx-6700-xt-3dfx-voodoo"
             >
@@ -77,6 +79,18 @@ const NewsPage = (): JSX.Element => (
         </Button>
       </Article>
       <Article>
+        <Flex>
+          <Link
+            tag
+            stopPropagation
+            borderradius="0"
+            height="100%"
+            padding="20px 10px"
+            href="/news/hardware"
+          >
+            HW News
+          </Link>
+        </Flex>
         <Button
           transparent
           padding="10px 15px"
@@ -86,15 +100,6 @@ const NewsPage = (): JSX.Element => (
             Router.push("/news/3643/hw-news-rx-6700-xt-3dfx-voodoo")
           }
         >
-          <Link
-            secondary
-            noglow
-            stopPropagation
-            padding="4px 8px"
-            href="/news/hardware"
-          >
-            HW News
-          </Link>
           <Flex direction="column" padding="10px">
             <Link
               normal

@@ -2,11 +2,12 @@
 import styled from "@emotion/styled";
 
 const Article = styled.article`
+  display: flex;
   background: #fff;
   color: #0076ff;
   margin-bottom: 40px;
-  padding: 10px 0;
   border-radius: 4px;
+  overflow: hidden;
 `;
 
 export default Article;

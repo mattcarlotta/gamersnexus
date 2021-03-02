@@ -1,10 +1,11 @@
+import Router from "next/router";
 import Center from "~components/Layout/Center";
 import ErrorMessage from "~components/Layout/ErrorMessage";
 import ErrorStatus from "~components/Layout/ErrorStatus";
 import Flex from "~components/Layout/Flex";
 import HomeIcon from "~components/Layout/HomeIcon";
+import Button from "~components/Layout/Button";
 import Header from "~components/Navigation/Header";
-import Link from "~components/Navigation/Link";
 import { NextPage } from "~types";
 
 const NotFound: NextPage = () => (
@@ -33,10 +34,10 @@ const NotFound: NextPage = () => (
       <ErrorMessage>
         We&#39;re sorry, but the page you&#39;ve requested was not found.
       </ErrorMessage>
-      <Link tertiary href="/" replace>
+      <Button type="button" onClick={() => Router.back()}>
         <HomeIcon />
-        <span>Go Home</span>
-      </Link>
+        <span>Go Back</span>
+      </Button>
     </Center>
   </Flex>
 );
