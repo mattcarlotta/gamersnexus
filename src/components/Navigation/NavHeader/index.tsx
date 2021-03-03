@@ -59,11 +59,13 @@ const HeaderComponent = ({ className }: HeaderProps): JSX.Element => {
         <form
           css={css`
             display: flex;
+            align-items: center;
           `}
           onSubmit={e => e.preventDefault()}
         >
           <button
             css={css`
+              display: flex;
               text-align: center;
               transition: all 200ms ease-in-out 0s;
               text-decoration: none;
@@ -72,7 +74,6 @@ const HeaderComponent = ({ className }: HeaderProps): JSX.Element => {
               border: 0;
               background: transparent;
               padding: 0px 4px;
-              font-size: 15px;
               color: #f7f7f7;
             `}
             type="submit"

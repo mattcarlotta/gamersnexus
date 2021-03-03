@@ -20,7 +20,7 @@ const PlayButtonComponent = ({
     onClick={onClick}
   >
     <FaPlayCircle style={{ marginRight: 5 }} />
-    {title}
+    Start video at {title}
   </div>
 );
 

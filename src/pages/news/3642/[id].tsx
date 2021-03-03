@@ -280,7 +280,6 @@ const NewsArticle3642 = (): JSX.Element => {
             Source:
             <EmbedTweet id="1361957544529387521" user="GamersNexus" />
           </Paragraph>
-
           <SubHeader id="intel-vs-amd">
             Intel i5-11600K Benchmark Leaks vs. AMD
           </SubHeader>
