@@ -77,7 +77,7 @@ const Link = styled(LinkComponent)<{
   background: ${({ active, normal, primary, secondary, tag, tertiary }) => {
     if (active) return "#f4f4f4";
     if (normal) return "transparent";
-    if (primary) return "#transparent";
+    if (primary) return "transparent";
     if (secondary) return "#015eca";
     if (tertiary) return "#1e1e1e";
     if (tag) return "#015eca";
