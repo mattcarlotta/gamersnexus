@@ -53,7 +53,7 @@ const GuidesPage = (): JSX.Element => (
             </Link>
             <PostMeta
               username="Steve Burke"
-              avatar="steveBurke"
+              avatar="steveBurke.jpg"
               views={0}
               date={String(new Date(2020, 5, 28, 2, 49, 0, 0))}
               showViews
