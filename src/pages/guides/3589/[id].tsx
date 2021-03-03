@@ -195,6 +195,7 @@ const GuidesArticle3589 = (): JSX.Element => {
           <BarChart
             data={data}
             margin={{ top: 70, right: 150, bottom: 80, left: 250 }}
+            colors={["#4285F4", "#E06666", "#F6B26B"]}
             keys={["AVG FPS", "1% Low", "0.1% Low"]}
             bottomLabel="onPresent Frames Per Second (higher is better/more consistent)"
             bottomFormat={(tick: string) => `${tick}.0`}

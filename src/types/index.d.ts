@@ -7,6 +7,7 @@ import {
   CSSProperties,
   FC,
   FormEvent,
+  Key,
   ReactNode,
   RefObject
 } from "react";
@@ -271,6 +272,7 @@ export {
   CSSProperties,
   FC,
   FormEvent,
+  Key,
   NextApiRequest,
   NextApiResponse,
   NextPage,
