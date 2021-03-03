@@ -15,6 +15,11 @@ module.exports = {
   },
   webpack(config, { isServer }) {
     /* adds custom plugins to client and server */
+    config.module.rules.push({
+      test: /react-spring/,
+      sideEffects: true
+    });
+
     config.plugins.push(
       ...[
         analyze &&
