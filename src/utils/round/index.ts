@@ -19,6 +19,7 @@ export default function round(n: number): string {
       }
 
       // Add the letter for the abbreviation
+      // @ts-ignore
       n += a[i];
 
       // We are done... stop

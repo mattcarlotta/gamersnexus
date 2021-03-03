@@ -9,7 +9,7 @@ const styles = {
 } as CSSProperties;
 
 const NoData: FC = () => (
-  <Container dataTestId="no-data" innerStyle={{ height: 400 }}>
+  <Container data-testid="no-data" style={{ height: 400 }}>
     <Flex
       direction="column"
       justify="center"

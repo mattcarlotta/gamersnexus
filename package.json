@@ -23,7 +23,8 @@
     "test:prod": "npm run build && npm run start",
     "test:stage": "ENV_DEBUG=true ENV_LOAD=.env.staging NODE_OPTIONS='-r snackables' next build && npm run staging",
     "test:watch": "jest --config ./jest.json --watch --onlyChanged",
-    "test:watchall": "jest --config ./jest.json --watchAll"
+    "test:watchall": "jest --config ./jest.json --watchAll",
+    "type:app": "tsc --p ./tsconfig.json"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
