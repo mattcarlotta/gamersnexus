@@ -61,7 +61,7 @@ const Link = styled(LinkComponent)<{
   display: ${({ display }) => display};
   cursor: pointer;
   color: ${({ active, normal, primary, secondary, tag, tertiary }) => {
-    if (active) return "#0076ff";
+    if (active) return "#006ae4";
     if (normal) return "#0076ff";
     if (primary) return "#fff";
     if (secondary) return "#fff";
@@ -81,7 +81,7 @@ const Link = styled(LinkComponent)<{
     if (secondary) return "#015eca";
     if (tertiary) return "#1e1e1e";
     if (tag) return "#015eca";
-    return "#0076ff";
+    return "#006ae4";
   }};
   border: ${({ border, primary, normal, secondary, tag, tertiary }) => {
     if (border) return border;
@@ -89,13 +89,13 @@ const Link = styled(LinkComponent)<{
     if (primary) return "1px solid transparent";
     if (secondary) return "1px solid #0076ff";
     if (tertiary) return "1px solid #1e1e1e";
-    return "1px solid #0076ff";
+    return "1px solid #006ae4";
   }};
   box-shadow: ${({ noglow, normal, primary, secondary, tag }) => {
     if (noglow || normal || tag) return "none";
     if (primary) return "none";
     if (secondary) return "0 4px 14px 0 rgba(0, 119, 255, 0.452)";
-    return "0 4px 14px 0 rgba(0, 118, 255, 0.39)";
+    return "0 4px 14px 0 rgba(0, 119, 255, 0.513)";
   }};
   padding: ${({ padding }) => padding || "10px 40px"};
   border-radius: ${({ borderradius }) => borderradius || "4px"};

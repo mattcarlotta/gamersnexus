@@ -31,7 +31,13 @@ const HeaderComponent = ({ className }: HeaderProps): JSX.Element => {
   return (
     <header className={className}>
       <FlexStart>
-        <Link href="/" margin="0 15px 0 0" padding="0" borderradius="50px">
+        <Link
+          noglow
+          href="/"
+          margin="0 15px 0 0"
+          padding="0"
+          borderradius="50px"
+        >
           <img
             css={css`
               display: flex;
@@ -106,11 +112,11 @@ const Header = styled(HeaderComponent)`
   position: fixed;
   top: 0;
   width: 100%;
-  background: #0076ff;
+  background: #006ae4;
   height: 60px;
   padding-right: 30px;
   padding-left: 30px;
-  box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+  box-shadow: 0 4px 14px 0 rgb(0, 119, 255, 0.45);
 `;
 
 export default Header;

@@ -10,7 +10,12 @@ describe("Styled Button", () => {
   let buttonNode: () => ReactWrapper;
   beforeEach(() => {
     wrapper = mount(
-      <Button type="button" dataTestId="test-button" {...initProps} />
+      <Button
+        ariaLabel="test"
+        type="button"
+        dataTestId="test-button"
+        {...initProps}
+      />
     );
     buttonNode = () => wrapper.find("[data-testid='test-button']");
   });

@@ -117,7 +117,7 @@ class PostMeta extends React.Component<PostMetaProps, PostMetaState> {
             <span
               css={css`
                 text-decoration: underline;
-                color: #0076ff;
+                color: #006ae4;
               `}
             >
               {username}
