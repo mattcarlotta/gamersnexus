@@ -92,7 +92,11 @@ const NewsArticle3642 = (): JSX.Element => {
           <TextAlign center>
             <YoutubeVideo {...state} innerRef={videoRef} id="2YNR-xggKt0" />
           </TextAlign>
-          <SubHeader data-value="117" onClick={handleSetTime}>
+          <SubHeader
+            id="amd-usb-dropout"
+            data-value="117"
+            onClick={handleSetTime}
+          >
             01:57 | AMD Working on USB Dropout Issues
           </SubHeader>
           <Paragraph>
@@ -136,7 +140,7 @@ const NewsArticle3642 = (): JSX.Element => {
               https://www.reddit.com/r/Amd/comments/lnmet0/an_update_on_usb_connectivity_with_500_series/
             </OutsideLink>
           </Paragraph>
-          <SubHeader data-value="287" onClick={handleSetTime}>
+          <SubHeader id="nvidia" data-value="287" onClick={handleSetTime}>
             04:47 | NVIDIA Cuts Off Miners & RTX 3060 News
           </SubHeader>
           <Paragraph>
@@ -197,7 +201,7 @@ const NewsArticle3642 = (): JSX.Element => {
             </OutsideLink>
             <br />
           </Paragraph>
-          <SubHeader data-value="366" onClick={handleSetTime}>
+          <SubHeader id="lastpass" data-value="366" onClick={handleSetTime}>
             06:06 | LastPass Cuts-Down Free Options
           </SubHeader>
           <Paragraph>

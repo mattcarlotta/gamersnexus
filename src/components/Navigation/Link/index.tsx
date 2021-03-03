@@ -59,7 +59,7 @@ const Link = styled(LinkComponent)<{
   text-decoration: none;
   text-transform: ${({ texttransform }) => texttransform || "uppercase"};
   background: ${({ active, normal, primary, secondary, tag, tertiary }) => {
-    if (active) return "#d7eaff";
+    if (active) return "#f4f4f4";
     if (normal) return "transparent";
     if (primary) return "#transparent";
     if (secondary) return "#015eca";

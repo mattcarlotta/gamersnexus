@@ -96,7 +96,7 @@ const NewsArticle3643 = (): JSX.Element => {
           <TextAlign center>
             <YoutubeVideo {...state} innerRef={videoRef} id="IPxKmKA7V5o" />
           </TextAlign>
-          <SubHeader data-value="71" onClick={handleSetTime}>
+          <SubHeader id="cats-angels" data-value="71" onClick={handleSetTime}>
             01:11 | Quick GN x Cat Angels Update
           </SubHeader>
           <Paragraph>
@@ -142,7 +142,11 @@ const NewsArticle3643 = (): JSX.Element => {
             this community can be proud of, in between all the bickering about
             which GPU vendor is the most evil at any given time.
           </Paragraph>
-          <SubHeader data-value="252" onClick={handleSetTime}>
+          <SubHeader
+            id="amd-rx-6700xt"
+            data-value="252"
+            onClick={handleSetTime}
+          >
             04:12 | AMD RX 6700 XT Official Announcement Announced
           </SubHeader>
           <Paragraph>
@@ -165,7 +169,11 @@ const NewsArticle3643 = (): JSX.Element => {
             Source:
             <EmbedTweet id="1364636388453470210" user="Radeon" />
           </Paragraph>
-          <SubHeader data-value="350" onClick={handleSetTime}>
+          <SubHeader
+            id="hardware-unboxed"
+            data-value="350"
+            onClick={handleSetTime}
+          >
             05:50 | Hardware Unboxed Shadowbanned on YouTube
           </SubHeader>
           <Paragraph>

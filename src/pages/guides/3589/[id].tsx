@@ -115,7 +115,7 @@ const GuidesArticle3589 = (): JSX.Element => {
             direct comparison chart-to-chart. For that, you’ll want to see the
             standalone reviews.
           </Paragraph>
-          <SubHeader nohover>
+          <SubHeader id="resources" nohover>
             Resources: Recent Reviews for More Depth
           </SubHeader>
           <Paragraph>
@@ -183,7 +183,11 @@ const GuidesArticle3589 = (): JSX.Element => {
               <ListItem>The rest were posted in late 2019</ListItem>
             </List>
           </Paragraph>
-          <SubHeader data-value="202" onClick={handleSetTime}>
+          <SubHeader
+            id="best-gaming-cpu"
+            data-value="202"
+            onClick={handleSetTime}
+          >
             3:22 | Best Gaming CPU - Intel i5-10600K
           </SubHeader>
           <Paragraph>
