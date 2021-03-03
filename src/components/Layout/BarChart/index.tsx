@@ -21,7 +21,6 @@ export type BarChart = {
 export type BarChartState = {
   activeColors: Array<string>;
   activeKeys: Array<string>;
-  wasFiltered: boolean;
 };
 
 export type BarData = {
@@ -44,13 +43,10 @@ const BarChart = ({
 }: BarChart): JSX.Element => {
   const [state, setState] = React.useState({
     activeColors: colors,
-    activeKeys: keys,
-    isFiltered: false
+    activeKeys: keys
   });
   const key = state.activeKeys[0];
-  const largestValue = data.reduce((a, b) =>
-    a[key] > b[key] ? a[key] : b[key]
-  );
+  const largestValue = data.reduce((a, b) => (a > b[key] ? a : b[key]));
   const maxValue = Math.ceil((largestValue + 1) / 10) * 10;
 
   const handleLabelClick = React.useCallback(
@@ -59,12 +55,11 @@ const BarChart = ({
         const foundIndex = prevState.activeKeys.findIndex(
           key => key === data.id
         );
-        const isFiltered = !prevState.isFiltered;
+        const isFiltered = prevState.activeKeys.length === 1;
 
         return {
-          activeKeys: isFiltered ? [keys[foundIndex]] : keys,
-          activeColors: isFiltered ? [colors[foundIndex]] : colors,
-          isFiltered
+          activeKeys: isFiltered ? keys : [keys[foundIndex]],
+          activeColors: isFiltered ? colors : [colors[foundIndex]]
         };
       });
     },

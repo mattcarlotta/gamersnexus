@@ -4,38 +4,10 @@ export const GlobalStylesheet = (): JSX.Element => (
   <Global
     styles={css`
       @font-face {
-        font-family: "Poppins Black";
-        font-style: normal;
-        font-weight: normal;
-        src: url("/fonts/Poppins-Black.ttf") format("truetype");
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "Poppins BlackItalic";
-        font-style: normal;
-        font-weight: normal;
-        src: url("/fonts/Poppins-BlackItalic.ttf") format("truetype");
-        font-display: swap;
-      }
-      @font-face {
         font-family: "Poppins Bold";
         font-style: normal;
         font-weight: normal;
         src: url("/fonts/Poppins-Bold.ttf") format("truetype");
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "Poppins BoldItalic";
-        font-style: normal;
-        font-weight: normal;
-        src: url("/fonts/Poppins-BoldItalic.ttf") format("truetype");
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "Poppins ExtraBold";
-        font-style: normal;
-        font-weight: normal;
-        src: url("/fonts/Poppins-ExtraBold.ttf") format("truetype");
         font-display: swap;
       }
       @font-face {
@@ -46,52 +18,10 @@ export const GlobalStylesheet = (): JSX.Element => (
         font-display: swap;
       }
       @font-face {
-        font-family: "Poppins Light";
-        font-style: normal;
-        font-weight: normal;
-        src: url("/fonts/Poppins-Light.ttf") format("truetype");
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "Poppins LightItalic";
-        font-style: normal;
-        font-weight: normal;
-        src: url("/fonts/Poppins-LightItalic.ttf") format("truetype");
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "Poppins Medium";
-        font-style: normal;
-        font-weight: normal;
-        src: url("/fonts/Poppins-Medium.ttf") format("truetype");
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "Poppins MediumItalic";
-        font-style: normal;
-        font-weight: normal;
-        src: url("/fonts/Poppins-MediumItalic.ttf") format("truetype");
-        font-display: swap;
-      }
-      @font-face {
         font-family: "Poppins Regular";
         font-style: normal;
         font-weight: normal;
         src: url("/fonts/Poppins-Regular.ttf") format("truetype");
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "Poppins SemiBold";
-        font-style: normal;
-        font-weight: normal;
-        src: url("/fonts/Poppins-SemiBold.ttf") format("truetype");
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "Poppins SemiBoldItalic";
-        font-style: normal;
-        font-weight: normal;
-        src: url("/fonts/Poppins-SemiBoldItalic.ttf") format("truetype");
         font-display: swap;
       }
 
@@ -113,7 +43,7 @@ export const GlobalStylesheet = (): JSX.Element => (
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        font-family: "Poppins Light", -apple-system, BlinkMacSystemFont,
+        font-family: "Poppins Regular", -apple-system, BlinkMacSystemFont,
           "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
           "Droid Sans", "Helvetica Neue", sans-serif;
         color: #ccc;
@@ -162,12 +92,79 @@ export const GlobalStylesheet = (): JSX.Element => (
       ::after,
       ::before {
         box-sizing: border-box;
-        font-family: "Poppins Light", -apple-system, BlinkMacSystemFont,
+        font-family: "Poppins Regular", -apple-system, BlinkMacSystemFont,
           "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
           "Droid Sans", "Helvetica Neue", sans-serif;
       }
     `}
   />
 );
+
+/*
+      @font-face {
+        font-family: "Poppins Black";
+        font-style: normal;
+        font-weight: normal;
+        src: url("/fonts/Poppins-Black.ttf") format("truetype");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Poppins BlackItalic";
+        font-style: normal;
+        font-weight: normal;
+        src: url("/fonts/Poppins-BlackItalic.ttf") format("truetype");
+        font-display: swap;
+      }
+       @font-face {
+        font-family: "Poppins BoldItalic";
+        font-style: normal;
+        font-weight: normal;
+        src: url("/fonts/Poppins-BoldItalic.ttf") format("truetype");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Poppins ExtraBold";
+        font-style: normal;
+        font-weight: normal;
+        src: url("/fonts/Poppins-ExtraBold.ttf") format("truetype");
+        font-display: swap;
+      }
+ 
+      @font-face {
+        font-family: "Poppins LightItalic";
+        font-style: normal;
+        font-weight: normal;
+        src: url("/fonts/Poppins-LightItalic.ttf") format("truetype");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Poppins Medium";
+        font-style: normal;
+        font-weight: normal;
+        src: url("/fonts/Poppins-Medium.ttf") format("truetype");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Poppins MediumItalic";
+        font-style: normal;
+        font-weight: normal;
+        src: url("/fonts/Poppins-MediumItalic.ttf") format("truetype");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Poppins SemiBold";
+        font-style: normal;
+        font-weight: normal;
+        src: url("/fonts/Poppins-SemiBold.ttf") format("truetype");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Poppins SemiBoldItalic";
+        font-style: normal;
+        font-weight: normal;
+        src: url("/fonts/Poppins-SemiBoldItalic.ttf") format("truetype");
+        font-display: swap;
+      }
+*/
 
 export default GlobalStylesheet;

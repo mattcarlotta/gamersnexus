@@ -1,15 +1,31 @@
 import NextLink from "next/link";
 import styled from "@emotion/styled";
-import { LinkProps } from "~types";
+import { ReactNode } from "~types";
+
+export type LinkProps = {
+  children: ReactNode;
+  className?: string;
+  href: string;
+  replace?: boolean;
+  shallow?: boolean;
+  stopPropagation?: boolean;
+};
 
 const LinkComponent = ({
   children,
   className,
   href,
   replace,
+  shallow,
   stopPropagation
 }: LinkProps) => (
-  <NextLink href={href} prefetch={false} passHref replace={replace}>
+  <NextLink
+    href={href}
+    prefetch={false}
+    passHref
+    replace={replace}
+    shallow={shallow}
+  >
     <a
       data-testid="link"
       onClick={stopPropagation ? e => e.stopPropagation() : undefined}

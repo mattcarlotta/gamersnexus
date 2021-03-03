@@ -14,13 +14,7 @@ class CustomDocument extends Document {
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <link
           rel="preload"
-          href="/fonts/Poppins-Light.ttf"
-          as="font"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Poppins-BlackItalic.ttf"
+          href="/fonts/Poppins-Regular.ttf"
           as="font"
           crossOrigin="anonymous"
         />
@@ -32,55 +26,7 @@ class CustomDocument extends Document {
         />
         <link
           rel="preload"
-          href="/fonts/Poppins-BoldItalic.ttf"
-          as="font"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Poppins-ExtraBold.ttf"
-          as="font"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
           href="/fonts/Poppins-Italic.ttf"
-          as="font"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Poppins-Light.ttf"
-          as="font"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Poppins-LightItalic.ttf"
-          as="font"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Poppins-Medium.ttf"
-          as="font"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Poppins-Regular.ttf"
-          as="font"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Poppins-SemiBold.ttf"
-          as="font"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Poppins-SemiBoldItalic.ttf"
           as="font"
           crossOrigin="anonymous"
         />

@@ -7,11 +7,12 @@ import Paragraph from "~components/Layout/Paragraph";
 import PostMeta from "~components/Layout/PostMeta";
 import Flex from "~components/Layout/Flex";
 import Quote from "~components/Layout/Quote";
+import PlayButton from "~components/Layout/PlayButton";
 import SubHeader from "~components/Layout/SubHeader";
 import TextAlign from "~components/Layout/TextAlign";
-import Header from "~components/Navigation/Header";
 import Tags from "~components/Layout/Tags";
 import Title from "~components/Layout/Title";
+import Header from "~components/Navigation/Header";
 import OutsideLink from "~components/Navigation/OutsideLink";
 import YoutubeVideo from "~components/Layout/YoutubeVideo";
 import { ChangeEvent } from "~types";
@@ -96,9 +97,8 @@ const NewsArticle3643 = (): JSX.Element => {
           <TextAlign center>
             <YoutubeVideo {...state} innerRef={videoRef} id="IPxKmKA7V5o" />
           </TextAlign>
-          <SubHeader id="cats-angels" data-value="71" onClick={handleSetTime}>
-            01:11 | Quick GN x Cat Angels Update
-          </SubHeader>
+          <SubHeader id="cats-angels">Quick GN x Cat Angels Update</SubHeader>
+          <PlayButton title="1:11" onClick={handleSetTime} />
           <Paragraph>
             With all the bad news lately -- not just in tech, but in general --
             we wanted to open on a positive note here. Any of you who’ve been
@@ -142,13 +142,10 @@ const NewsArticle3643 = (): JSX.Element => {
             this community can be proud of, in between all the bickering about
             which GPU vendor is the most evil at any given time.
           </Paragraph>
-          <SubHeader
-            id="amd-rx-6700xt"
-            data-value="252"
-            onClick={handleSetTime}
-          >
-            04:12 | AMD RX 6700 XT Official Announcement Announced
+          <SubHeader id="amd-rx-6700xt">
+            AMD RX 6700 XT Official Announcement Announced
           </SubHeader>
+          <PlayButton title="4:12" onClick={handleSetTime} />
           <Paragraph>
             AMD’s RX 6700 XT GPU announcement was officially announced by AMD’s
             Radeon twitter page, marking March 3rd as the launch date for the
@@ -169,13 +166,10 @@ const NewsArticle3643 = (): JSX.Element => {
             Source:
             <EmbedTweet id="1364636388453470210" user="Radeon" />
           </Paragraph>
-          <SubHeader
-            id="hardware-unboxed"
-            data-value="350"
-            onClick={handleSetTime}
-          >
-            05:50 | Hardware Unboxed Shadowbanned on YouTube
+          <SubHeader id="hardware-unboxed">
+            Hardware Unboxed Shadowbanned on YouTube
           </SubHeader>
+          <PlayButton title="5:50" onClick={handleSetTime} />
           <Paragraph>
             This next topic is more of a YouTube platform issue, but it affects
             someone in our community. Hardware Unboxed recently posted on its
@@ -244,6 +238,72 @@ const NewsArticle3643 = (): JSX.Element => {
             <br />
             Source:
             <EmbedTweet id="1365161458321948674" user="HardwareUnboxed" />
+          </Paragraph>
+          <SubHeader id="taiwan-drought">
+            Taiwan Drought Affecting Foundries
+          </SubHeader>
+          <PlayButton title="12:50" onClick={handleSetTime} />
+          <Paragraph>
+            Taiwan has been facing a unique climate crisis, in which the island
+            has seen a great reduction in both typhoons and annual rainfall.
+            Like the weather in Texas that shut down semiconductor plans two
+            weeks ago, this is influencing silicon production in Taiwan. For the
+            first time in more than half of a century, not a single typhoon
+            landed on Taiwan in 2020.
+          </Paragraph>
+          <Paragraph>
+            Taiwan’s water levels in several reservoirs are at or below 20%, and
+            the government has requested that companies reduce water usage by 7%
+            to 11%. As Taiwan implements greater water restrictions, foundries
+            like TSMC and UMC are trucking in water to fabs on the island.
+            According to Reuters, chipmakers based in Taiwan (TSMC, UMC, VIS)
+            have been able to stave-off reductions in production by importing
+            water.
+          </Paragraph>
+          <Paragraph>
+            Foundries typically recycle and reuse a great portion of their
+            wastewater and Taiwan has particularly strict environmental laws. We
+            showed some of this in our factory tours in Taipei. An extended
+            water shortage could certainly intensify an already pervasive global
+            semiconductor shortage.
+          </Paragraph>
+          <Paragraph>
+            Source:
+            <OutsideLink href="https://www.reuters.com/article/us-taiwan-drought-semiconductors-idUSKBN2AO0G3">
+              https://www.reuters.com/article/us-taiwan-drought-semiconductors-idUSKBN2AO0G3
+            </OutsideLink>
+          </Paragraph>
+          <SubHeader id="hp">HP Acquires HyperX</SubHeader>
+          <PlayButton title="14:08" onClick={handleSetTime} />
+          <Paragraph>
+            HP Inc has announced that it has agreed to acquire HyperX, Kingston
+            Technology’s gaming brand. HP will buy HyperX from Kingston for $425
+            million, with an expected closing date landing sometime in Q2’2021,
+            pending regulatory approval. The caveat, however, is that HP is only
+            acquiring HyperX peripherals; Kingston will retain the HyperX{" "}
+            <OutsideLink href="https://www.gamersnexus.net/dictionary/5-ssd/35-nand-flash">
+              NAND Flash
+            </OutsideLink>
+            and DRAM segment.
+          </Paragraph>
+          <Paragraph>
+            The press release is somewhat sparse on how the deal will play out,
+            but presumably HyperX will exist alongside HP’s Omen line, rather
+            than be folded into it.
+          </Paragraph>
+          <Paragraph>
+            Kingston spawned the HyperX brand way back in 2002, with its
+            inaugural memory tester and DDR-400 modules. The company has
+            expanded that brand into headsets, microphones, keyboards, mice,
+            console accessories, and more. HP will use the brand to gain a
+            better foothold in the ever growing gaming market, assuming it
+            doesn’t consume and digest the brand altogether.
+          </Paragraph>
+          <Paragraph>
+            Source:
+            <OutsideLink href="https://press.hp.com/us/en/press-releases/2021/hp-inc-to-acquire-hyperx.htmlus-taiwan-drought-semiconductors-idUSKBN2AO0G3">
+              https://press.hp.com/us/en/press-releases/2021/hp-inc-to-acquire-hyperx.html
+            </OutsideLink>
           </Paragraph>
         </TextAlign>
       </Article>

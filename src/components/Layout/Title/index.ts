@@ -7,7 +7,7 @@ const Title = styled.div`
   color: #0076ff;
   text-transform: uppercase;
   text-align: center;
-  font-family: "Poppins Medium", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "Poppins Bold", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
 `;

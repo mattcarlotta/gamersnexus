@@ -1,8 +1,10 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import Article from "~components/Layout/Article";
+import EmbedTweet from "~components/Layout/EmbedTweet";
 import ImageContainer from "~components/Layout/ImageContainer";
 import Paragraph from "~components/Layout/Paragraph";
+import PlayButton from "~components/Layout/PlayButton";
 import PostMeta from "~components/Layout/PostMeta";
 import Flex from "~components/Layout/Flex";
 import Quote from "~components/Layout/Quote";
@@ -65,7 +67,7 @@ const NewsArticle3642 = (): JSX.Element => {
         <ImageContainer src="/images/amd.jpg" alt="amd.jpg" />
         <TextAlign left>
           <Paragraph>
-            It&#39;s been an interesting week or so for hardware and technology
+            It&apos;s been an interesting week or so for hardware and technology
             news alike, with Nvidia and LastPass making waves. Nvidia is
             attempting to stem the flow of GPUs to miners by artificially
             limiting the hashing power of its upcoming RTX 3060 GPUs, as well as
@@ -77,7 +79,7 @@ const NewsArticle3642 = (): JSX.Element => {
             to the chagrin of its users.
           </Paragraph>
           <Paragraph>
-            At GN, we recently looked at various{" "}
+            At GN, we recently looked at various
             <OutsideLink href="https://www.youtube.com/watch?v=Iqv4meZcVEk&ab_channel=GamersNexus">
               Xbox Series X thermals
             </OutsideLink>
@@ -92,13 +94,10 @@ const NewsArticle3642 = (): JSX.Element => {
           <TextAlign center>
             <YoutubeVideo {...state} innerRef={videoRef} id="2YNR-xggKt0" />
           </TextAlign>
-          <SubHeader
-            id="amd-usb-dropout"
-            data-value="117"
-            onClick={handleSetTime}
-          >
-            01:57 | AMD Working on USB Dropout Issues
+          <SubHeader id="amd-usb-dropout">
+            AMD Working on USB Dropout Issues
           </SubHeader>
+          <PlayButton title="01:57" onClick={handleSetTime} />
           <Paragraph>
             AMD recently made a public post acknowledging USB dropout issues
             that its user-base has complained of for several months now. While
@@ -140,9 +139,10 @@ const NewsArticle3642 = (): JSX.Element => {
               https://www.reddit.com/r/Amd/comments/lnmet0/an_update_on_usb_connectivity_with_500_series/
             </OutsideLink>
           </Paragraph>
-          <SubHeader id="nvidia" data-value="287" onClick={handleSetTime}>
-            04:47 | NVIDIA Cuts Off Miners & RTX 3060 News
+          <SubHeader id="nvidia">
+            NVIDIA Cuts Off Miners & RTX 3060 News
           </SubHeader>
+          <PlayButton title="04:47" onClick={handleSetTime} />
           <Paragraph>
             A few days ahead of the official launch for Nvidia’s
             highly-anticipated GeForce RTX 3060, Nvidia has announced that it is
@@ -201,9 +201,8 @@ const NewsArticle3642 = (): JSX.Element => {
             </OutsideLink>
             <br />
           </Paragraph>
-          <SubHeader id="lastpass" data-value="366" onClick={handleSetTime}>
-            06:06 | LastPass Cuts-Down Free Options
-          </SubHeader>
+          <SubHeader id="lastpass">LastPass Cuts-Down Free Options</SubHeader>
+          <PlayButton title="06:06" onClick={handleSetTime} />
           <Paragraph>
             LastPass has been among the most popular password managers for years
             now, having largely built that reputation on the value and usability
@@ -247,6 +246,84 @@ const NewsArticle3642 = (): JSX.Element => {
             Source:
             <OutsideLink href="https://www.theverge.com/2021/2/16/22285531/lastpass-free-tier-mobile-computer-device-premium-family">
               https://www.theverge.com/2021/2/16/22285531/lastpass-free-tier-mobile-computer-device-premium-family
+            </OutsideLink>
+          </Paragraph>
+          <SubHeader id="zotac">
+            Zotac Boasts About Mining Crypto, GN is Mean
+          </SubHeader>
+          <PlayButton title="08:58" onClick={handleSetTime} />
+          <Paragraph>
+            A few days ago, GN’s Steve clicked “retweet” on a Zotac tweet
+            showing a partner’s limited edition RTX 30-series cards mining
+            crypto. Upon retweeting, GN said, “Retweeted without further
+            commentary.” That’s all we did, and within a few hours, the tweet
+            was deleted.
+          </Paragraph>
+          <Paragraph>
+            Amid power outages in the US and global GPU stock limitations, Zotac
+            had its work cut out for it.
+          </Paragraph>
+          <Paragraph>
+            Making matters worse was Zotac’s cringey use of hashtags, which
+            included #PCMR, #PCGaming, and the dankest of all, “#Gamer.” You
+            know, because those would be the appropriate hashtags for gamers who
+            can’t get a gaming GPU right now.
+          </Paragraph>
+          <Paragraph>
+            The tweet went over about as well as you’d expect, although surely
+            not as well as Zotac was hoping. Many users erupted in anger and
+            frustration over the tweet, and as usual with these things, the
+            tweet wasn’t long for this world, with Zotac doing a 180 and
+            deleting the tweet.
+          </Paragraph>
+          <Paragraph>
+            Source:
+            <EmbedTweet id="1361957544529387521" user="GamersNexus" />
+          </Paragraph>
+
+          <SubHeader id="intel-vs-amd">
+            Intel i5-11600K Benchmark Leaks vs. AMD
+          </SubHeader>
+          <PlayButton title="10:42" onClick={handleSetTime} />
+          <Paragraph>
+            We don’t cover too many performance rumors, but this latest one is
+            close enough to launch that it’s worth throwing out there (if for no
+            other reason than to see if it comes true in about a month).
+          </Paragraph>
+          <Paragraph>
+            A new Geekbench score on a Gigabyte Z490 motherboard reports a 6220
+            multi-core score and 1565 single-thread score for a processor listed
+            as an Intel i5-11600K, which is marked as a 6-core, 12-thread
+            variant at 3.9 to 4.9GHz, although this doesn’t reveal boosting
+            behaviors. We don’t particularly like Geekbench as a benchmark in
+            general or as an indicator of performance overall, but it does have
+            some comparative value. The scoring combines floating point
+            operation performance analysis, cryptography scores, and integer
+            performance, and calculated an aggregate number based on about 21
+            tests. Gaming isn’t fully represented here, but things like physics,
+            encryption, text and PDF processing, and image compression make up
+            parts of the score.
+          </Paragraph>
+          <Paragraph>
+            The current scoring has the pre-release, alleged 11600K below
+            <OutsideLink href="https://browser.geekbench.com/processors/amd-ryzen-5-5600x">
+              a 5600X entry
+            </OutsideLink>
+            in both multi-core and single-core. In the early state of Intel’s
+            CPU -- assuming this is legitimate -- there’s maybe still some time
+            to get a few points back, but pricing will be the ultimate
+            determining factor between these two. Of course, gaming-only
+            performance will also be important to test.
+          </Paragraph>
+          <Paragraph>
+            We’re aware that there were leaks about Alder Lake this past week,
+            but until we’re closer to launch, we feel it’d be most responsible
+            to hold on coverage until it’s more solidified.
+          </Paragraph>
+          <Paragraph>
+            Source:
+            <OutsideLink href="ttps://browser.geekbench.com/v5/cpu/6584431">
+              https://browser.geekbench.com/v5/cpu/6584431
             </OutsideLink>
           </Paragraph>
         </TextAlign>

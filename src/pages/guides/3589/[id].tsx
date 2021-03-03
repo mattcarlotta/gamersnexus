@@ -2,22 +2,24 @@ import * as React from "react";
 import { useRouter } from "next/router";
 import Article from "~components/Layout/Article";
 import BarChart from "~components/Layout/BarChart";
+import Flex from "~components/Layout/Flex";
 import ImageContainer from "~components/Layout/ImageContainer";
 import Paragraph from "~components/Layout/Paragraph";
 import PostMeta from "~components/Layout/PostMeta";
-import Flex from "~components/Layout/Flex";
-// import Quote from "~components/Layout/Quote";
-import SubHeader from "~components/Layout/SubHeader";
-import TextAlign from "~components/Layout/TextAlign";
-import Header from "~components/Navigation/Header";
 import List from "~components/Layout/List";
 import ListItem from "~components/Layout/ListItem";
+import PlayButton from "~components/Layout/PlayButton";
+import SubHeader from "~components/Layout/SubHeader";
 import Tags from "~components/Layout/Tags";
+import TextAlign from "~components/Layout/TextAlign";
 import Title from "~components/Layout/Title";
 import YoutubeVideo from "~components/Layout/YoutubeVideo";
+import Header from "~components/Navigation/Header";
 import OutsideLink from "~components/Navigation/OutsideLink";
 import twdata from "./TWData";
 import f1data from "./F1Data";
+import gtadata from "./GTAData";
+import trdata from "./TRData";
 import { ChangeEvent } from "~types";
 
 export interface GuidesArticle {
@@ -115,7 +117,7 @@ const GuidesArticle3589 = (): JSX.Element => {
             direct comparison chart-to-chart. For that, you’ll want to see the
             standalone reviews.
           </Paragraph>
-          <SubHeader id="resources" nohover>
+          <SubHeader id="resources">
             Resources: Recent Reviews for More Depth
           </SubHeader>
           <Paragraph>
@@ -183,13 +185,10 @@ const GuidesArticle3589 = (): JSX.Element => {
               <ListItem>The rest were posted in late 2019</ListItem>
             </List>
           </Paragraph>
-          <SubHeader
-            id="best-gaming-cpu"
-            data-value="202"
-            onClick={handleSetTime}
-          >
-            3:22 | Best Gaming CPU - Intel i5-10600K
+          <SubHeader id="best-gaming-cpu">
+            Best Gaming CPU - Intel i5-10600K
           </SubHeader>
+          <PlayButton title="03:22" onClick={handleSetTime} />
           <Paragraph>
             Buy the
             <OutsideLink href="https://www.amazon.com/s?k=intel+i5-10600k&tag=gamersnexus01-20&ref=nb_sb_noss_2">
@@ -265,6 +264,92 @@ const GuidesArticle3589 = (): JSX.Element => {
             particularly impressive at its price. Intel did well here to get
             back in the game, but it’s not uncontested. AMD still has a long way
             to go to compete head-to-head with Intel for the gaming crown.
+          </Paragraph>
+          <SubHeader id="best-budget-gaming-cpu">
+            Best Budget Gaming CPU - AMD R3 3300X
+          </SubHeader>
+          <PlayButton title="06:15" onClick={handleSetTime} />
+          <Paragraph>
+            Buy the
+            <OutsideLink href="https://www.amazon.com/AMD-8-Thread-Unlocked-Desktop-Processor/dp/B0876YS2T4?tag=gamersnexus01-20">
+              AMD Ryzen 3 3300X on Amazon
+            </OutsideLink>
+            .
+          </Paragraph>
+          <BarChart
+            data={gtadata}
+            margin={{ top: 100, right: 150, bottom: 80, left: 250 }}
+            colors={["#4285F4", "#E06666", "#F6B26B"]}
+            keys={["AVG FPS", "1% Low", "0.1% Low"]}
+            bottomLabel="onPresent Frames Per Second (higher is better, more consistent is best)"
+            bottomFormat={(tick: string) => `${tick}.0`}
+            height="1400px"
+            title="GN CPU BenchMark | GTA V | 1080p/VH-Ultra, Extended Distance, High Detail Streaming |
+              GamersNexus.net"
+            subtitle="EVGA RTX 2080 Ti XC Ultra, GSkill Trident Z 4x8GB 3200 CL14, 1600W EVGA
+              T2"
+          />
+          <Paragraph>
+            Next up, our recommendation for Best Budget Gaming CPU. Where we
+            might recommend the Intel i5-10600K for gaming with less restrictive
+            of a budget, or the 10900K for the absolute peak of FPS for the few
+            competitively privileged enough to really need it, we’d recommend
+            something else for more budget-conscious gamers. The{" "}
+            <OutsideLink href="https://www.amazon.com/AMD-8-Thread-Unlocked-Desktop-Processor/dp/B0876YS2T4?tag=gamersnexus01-20">
+              AMD Ryzen 3 3300X
+            </OutsideLink>
+            gets that recommendation. This CPU, with its pricing at $120 MSRP,
+            is able to achieve 80-85% of the performance of higher-end CPUs in
+            most games. It’s significantly better than the $100 3100 thanks to
+            its 4+0 CCX configuration, rather than the 2+2 CCX configuration of
+            the 3100, where cross-CCX latency affects performance. The 3300X,
+            critically, can also be coupled with nearly any current generation
+            video card without significant bottlenecking on the CPU for higher
+            graphics settings. This becomes less true if you care more about low
+            graphics, high-FPS competitive gaming, at which point our
+            recommendation will shift toward the Intel parts. If you want more
+            of a GPU-bind, though, meaning higher graphics settings and
+            potentially resolutions higher than 1080p, GPU will rapidly become
+            more limiting than the CPU, and so the 3300X makes sense as a
+            starting point on the platform.
+          </Paragraph>
+          <BarChart
+            data={trdata}
+            margin={{ top: 100, right: 150, bottom: 80, left: 250 }}
+            colors={["#4285F4", "#E06666", "#F6B26B"]}
+            keys={["AVG FPS", "1% Low", "0.1% Low"]}
+            bottomLabel="onPresent Frames Per Second (higher is better, more consistent is best)"
+            bottomFormat={(tick: string) => `${tick}.0`}
+            height="1400px"
+            title="GN CPU BenchMark | Shadow of the Tomb Raider | 1080p/Medium, DX12 |
+              GamersNexus.net"
+            subtitle="EVGA RTX 2080 Ti XC Ultra, GSkill Trident Z 4x8GB 3200 CL14, 1600W EVGA
+              T2, 280 CLC DT, 360 HEDT"
+          />
+          <Paragraph>
+            We’ve been flashing through some of our bottleneck charts, and you
+            can check the previous content on that for more information on which
+            GPUs make the most sense. Although we absolutely do not recommend
+            coupling a $1200 2080 Ti with a $120 CPU, you could do it and get at
+            least half the performance in most scenarios. The 2080 Super is
+            about the peak for full performance, but something more reasonably
+            priced makes more sense since GPUs are often easier to upgrade than
+            CPUs. Either way, the 3300X offers plenty of room. If you want to
+            get more out of it, look into our coverage with memory tuning and
+            infinity fabric overclocking for AMD Ryzen CPUs. That’ll get you
+            more mileage and increase FPS headroom.
+          </Paragraph>
+          <Paragraph>
+            Honorable mention: As an honorable mention, we’ll point out the
+            <OutsideLink href="https://www.amazon.com/AMD-4-Thread-Unlocked-Processor-Graphics/dp/B0815JGFQ8?tag=gamersnexus01-20">
+              Athlon 3000G
+            </OutsideLink>
+            . This is a good stopgap measure if you’re playing simpler games
+            with less of a graphics slant. We’ve tested this one a lot over the
+            years, so we’ll leave it as an honorable mention and just note that
+            you can watch our previous content to get an idea of ideal use
+            cases. It’s not what we’d call “good,” but it can certainly get you
+            by if $100 on the CPU is out of reach.
           </Paragraph>
         </TextAlign>
       </Article>

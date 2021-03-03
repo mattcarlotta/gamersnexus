@@ -12,6 +12,7 @@ import TextAlign from "~components/Layout/TextAlign";
 import Link from "~components/Navigation/Link";
 import Header from "~components/Navigation/Header";
 import OutsideLink from "~components/Navigation/OutsideLink";
+import Title from "~components/Layout/Title";
 
 const NewsPage = (): JSX.Element => (
   <>
@@ -35,19 +36,14 @@ const NewsPage = (): JSX.Element => (
           padding="10px 15px"
           texttransform="none"
           type="button"
-          onClick={() =>
-            Router.push("/news/3643/hw-news-rx-6700-xt-3dfx-voodoo")
-          }
+          onClick={() => Router.push("/news/3643/rx-6700-xt-3dfx-voodoo")}
         >
           <Flex direction="column" padding="10px">
-            <Link
-              normal
-              fontsize="30px"
-              fontweight="600"
-              href="/news/3643/hw-news-rx-6700-xt-3dfx-voodoo"
-            >
-              AMD RX 6700 XT Announcment, 3DFX Voodoo Mod, Hardware Unboxed YT
-              Issues
+            <Link normal href="/news/3643/rx-6700-xt-3dfx-voodoo">
+              <Title>
+                AMD RX 6700 XT Announcment, 3DFX Voodoo Mod, Hardware Unboxed YT
+                Issues
+              </Title>
             </Link>
             <PostMeta
               username="Eric Hamilton"
@@ -69,7 +65,7 @@ const NewsPage = (): JSX.Element => (
                 <Paragraph>
                   We also have news on the AMD RX 6700 XT, Fry’s Electronics
                   ceasing operations, HP acquiring HyperX, and more. At GN, we
-                  recently reviewed{" "}
+                  recently reviewed
                   <OutsideLink href="https://www.youtube.com/watch?v=3C-RoDtqdJ8">
                     Nvidia’s RTX 3060
                   </OutsideLink>
@@ -110,19 +106,21 @@ const NewsPage = (): JSX.Element => (
           texttransform="none"
           type="button"
           onClick={() =>
-            Router.push("/news/3643/hw-news-rx-6700-xt-3dfx-voodoo")
+            Router.push(
+              "/news/3642/amd-usb-dropout-disconnection-response-intel-11600k"
+            )
           }
         >
           <Flex direction="column" padding="10px">
             <Link
               normal
               stopPropagation
-              fontsize="30px"
-              fontweight="600"
-              href="/news/3642/hw-news-amd-usb-dropout-disconnection-response-intel-11600k"
+              href="/news/3642/amd-usb-dropout-disconnection-response-intel-11600k"
             >
-              AMD on USB Dropout Issues, Intel i5-11600K Leaks, NVIDIA vs.
-              Mining
+              <Title>
+                AMD on USB Dropout Issues, Intel i5-11600K Leaks, NVIDIA
+                vs.Mining
+              </Title>
             </Link>
             <PostMeta
               username="Eric Hamilton"
@@ -134,7 +132,7 @@ const NewsPage = (): JSX.Element => (
             <MaskPreview>
               <TextAlign left>
                 <Paragraph>
-                  It&quot;s been an interesting week or so for hardware and
+                  It&apos;s been an interesting week or so for hardware and
                   technology news alike, with Nvidia and LastPass making waves.
                   Nvidia is attempting to stem the flow of GPUs to miners by
                   artificially limiting the hashing power of its upcoming RTX

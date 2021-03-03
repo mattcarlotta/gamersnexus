@@ -160,14 +160,6 @@ export type HeaderProps = {
 
 export type InputProps = ComponentProps;
 
-export type LinkProps = {
-  children: ReactNode;
-  className?: string;
-  href: string;
-  replace?: boolean;
-  stopPropagation?: boolean;
-};
-
 export type LoadingUsersProps = {
   className?: string;
   duration?: string;
