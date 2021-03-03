@@ -16,10 +16,10 @@ import Title from "~components/Layout/Title";
 import YoutubeVideo from "~components/Layout/YoutubeVideo";
 import Header from "~components/Navigation/Header";
 import OutsideLink from "~components/Navigation/OutsideLink";
-import twdata from "./TWData";
-import f1data from "./F1Data";
-import gtadata from "./GTAData";
-import trdata from "./TRData";
+import twdata from "~data/TWData";
+import f1data from "~data/F1Data";
+import gtadata from "~data/GTAData";
+import trdata from "~data/TRData";
 import { ChangeEvent } from "~types";
 
 export interface GuidesArticle {

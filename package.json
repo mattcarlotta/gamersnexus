@@ -9,7 +9,7 @@
   "scripts": {
     "analyze": "rimraf .next/analyze && analyze=true npm run build",
     "build": "ENV_DEBUG=true ENV_LOAD=.env.prod inStaging=false NODE_OPTIONS='-r snackables' next build",
-    "build:stage": "ENV_DEBUG=true ENV_LOAD=.env.prod inStaging=true NODE_OPTIONS='-r snackables' next build",
+    "build:stage": "ENV_DEBUG=true ENV_LOAD=.env.staging NODE_OPTIONS='-r snackables' next build",
     "dev": "ENV_DEBUG=true ENV_LOAD=.env.dev NODE_OPTIONS='--max_old_space_size=4096 --inspect -r snackables' next dev",
     "lint": "eslint -c ./.eslintrc --ignore-path ./.eslintignore ./src --ext .ts,.tsx",
     "lint:styles": "stylelint **/*.scss",
