@@ -97,6 +97,7 @@ export type ContainerProps = {
 };
 
 export interface ButtonProps extends ComponentProps {
+  ariaLabel: string;
   dataTestId?: string;
   disabled?: boolean;
   danger?: boolean;

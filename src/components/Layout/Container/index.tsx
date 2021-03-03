@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const Container = styled.div`
+const Container = styled.main`
   padding-top: 100px;
   margin: 0px auto;
   height: 100%;

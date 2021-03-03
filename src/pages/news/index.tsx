@@ -32,6 +32,7 @@ const NewsPage = (): JSX.Element => (
           </Link>
         </Flex>
         <Button
+          ariaLabel="View Article"
           transparent
           padding="10px 15px"
           texttransform="none"
@@ -101,6 +102,7 @@ const NewsPage = (): JSX.Element => (
           </Link>
         </Flex>
         <Button
+          ariaLabel="View Article"
           transparent
           padding="10px 15px"
           texttransform="none"

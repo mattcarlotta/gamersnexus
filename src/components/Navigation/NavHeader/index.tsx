@@ -64,6 +64,7 @@ const HeaderComponent = ({ className }: HeaderProps): JSX.Element => {
           onSubmit={e => e.preventDefault()}
         >
           <button
+            aria-label="Search Website Button"
             css={css`
               display: flex;
               text-align: center;

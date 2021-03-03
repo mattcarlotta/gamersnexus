@@ -34,7 +34,11 @@ const NotFound: NextPage = () => (
       <ErrorMessage>
         We&#39;re sorry, but the page you&#39;ve requested was not found.
       </ErrorMessage>
-      <Button type="button" onClick={() => Router.back()}>
+      <Button
+        ariaLabel="Go Back Button"
+        type="button"
+        onClick={() => Router.back()}
+      >
         <HomeIcon />
         <span>Go Back</span>
       </Button>

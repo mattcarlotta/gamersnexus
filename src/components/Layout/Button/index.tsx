@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import { ButtonProps } from "~types";
 
 const StyledButton = ({
+  ariaLabel,
   dataTestId,
   disabled,
   className,
@@ -14,6 +15,7 @@ const StyledButton = ({
 }: ButtonProps): JSX.Element => (
   <button
     data-testid={dataTestId}
+    aria-label={ariaLabel}
     disabled={disabled}
     type={type}
     className={className}
