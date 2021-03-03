@@ -12,7 +12,6 @@ export type BarChart = {
   data: Array<any>;
   height: string;
   keys: Array<string>;
-  maxValue?: number;
   padding?: number;
   subtitle: string;
   title: string;
@@ -40,7 +39,6 @@ const BarChart = ({
   keys,
   margin,
   padding,
-  maxValue,
   subtitle,
   title
 }: BarChart): JSX.Element => {
@@ -49,6 +47,11 @@ const BarChart = ({
     activeKeys: keys,
     isFiltered: false
   });
+  const key = state.activeKeys[0];
+  const largestValue = data.reduce((a, b) =>
+    a[key] > b[key] ? a[key] : b[key]
+  );
+  const maxValue = Math.ceil((largestValue + 1) / 10) * 10;
 
   const handleLabelClick = React.useCallback(
     (data: BarData): void => {
@@ -135,7 +138,13 @@ const BarChart = ({
         }}
         groupMode="grouped"
         layout="horizontal"
-        axisTop={null}
+        axisTop={{
+          tickSize: 5,
+          tickPadding: 5,
+          tickRotation: 0,
+          legendPosition: "middle",
+          legendOffset: 50
+        }}
         axisRight={null}
         axisBottom={{
           tickSize: 5,
@@ -146,7 +155,7 @@ const BarChart = ({
           legendOffset: 50,
           format: bottomFormat
         }}
-        maxValue={maxValue}
+        maxValue={maxValue || "auto"}
         enableGridX
         enableGridY={false}
         labelSkipWidth={12}

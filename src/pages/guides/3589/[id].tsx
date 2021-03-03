@@ -199,13 +199,12 @@ const GuidesArticle3589 = (): JSX.Element => {
           </Paragraph>
           <BarChart
             data={twdata}
-            margin={{ top: 80, right: 150, bottom: 80, left: 250 }}
+            margin={{ top: 100, right: 150, bottom: 80, left: 250 }}
             colors={["#4285F4", "#E06666", "#F6B26B"]}
             keys={["AVG FPS", "1% Low", "0.1% Low"]}
             bottomLabel="onPresent Frames Per Second (higher is better, more consistent is best)"
             bottomFormat={(tick: string) => `${tick}.0`}
             height="1400px"
-            maxValue={170}
             title="GN CPU BenchMark | Total War: Three Kingdoms Campaign | 1080p/High |
               GamersNexus.net"
             subtitle="EVGA RTX 2080 Ti XC Ultra, GSkill Trident Z 4x8GB 3200 CL14, 1600W EVGA
@@ -213,14 +212,13 @@ const GuidesArticle3589 = (): JSX.Element => {
           />
           <BarChart
             data={f1data}
-            margin={{ top: 80, right: 150, bottom: 80, left: 250 }}
+            margin={{ top: 100, right: 150, bottom: 80, left: 250 }}
             colors={["#4285F4", "#E06666"]}
             keys={["AVG FPS", "1% Low"]}
             padding={0.2}
             bottomLabel="onPresent Frames Per Second (higher is better, more consistent is best)"
             bottomFormat={(tick: string) => `${tick}.0`}
             height="1400px"
-            maxValue={300}
             title="GN CPU BenchMark | F1 2019 1080p/High | GamersNexus.net"
             subtitle="EVGA RTX 2080 Ti XC Ultra, GSkill Trident Z 4x8GB 3200 CL14, 1600W EVGA
               T2, 280 CLC DT, 360 HEDT"

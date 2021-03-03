@@ -10,7 +10,7 @@ const ChartTitle = ({ title, subtitle }: ChartTitleProps): JSX.Element => (
     <text
       textAnchor="start"
       x="-20%"
-      y={-44}
+      y={-64}
       style={{ fontSize: 14, fill: "#eee", fontWeight: 600 }}
     >
       {title}
@@ -18,7 +18,7 @@ const ChartTitle = ({ title, subtitle }: ChartTitleProps): JSX.Element => (
     <text
       textAnchor="start"
       x="-20%"
-      y={-28}
+      y={-48}
       style={{ fontSize: 12, fill: "#888", fontWeight: 600 }}
     >
       {subtitle}
