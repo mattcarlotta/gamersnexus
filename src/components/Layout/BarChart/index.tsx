@@ -1,6 +1,7 @@
 import * as React from "react";
 import { css } from "@emotion/react";
 import { ResponsiveBar } from "@nivo/bar";
+// import ChartLabelFormat from "./ChartLabelFormat";
 import ChartTitle from "./ChartTitle";
 import ChartTooltip from "./ChartTooltip";
 
@@ -12,6 +13,7 @@ export type BarChart = {
   height: string;
   keys: Array<string>;
   maxValue?: number;
+  padding?: number;
   subtitle: string;
   title: string;
   margin?: Record<string, unknown>;
@@ -37,6 +39,7 @@ const BarChart = ({
   height,
   keys,
   margin,
+  padding,
   maxValue,
   subtitle,
   title
@@ -71,8 +74,7 @@ const BarChart = ({
         height: ${height};
         width: 100%;
         background: #434343;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 10px auto;
         position: relative;
       `}
     >
@@ -91,8 +93,9 @@ const BarChart = ({
           () => <ChartTitle title={title} subtitle={subtitle} />
         ]}
         indexBy="id"
+        // labelFormat={ChartLabelFormat}
         margin={margin}
-        padding={0.15}
+        padding={padding || 0.15}
         theme={{
           axis: {
             ticks: {

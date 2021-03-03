@@ -8,17 +8,17 @@ export type ChartTitleProps = {
 const ChartTitle = ({ title, subtitle }: ChartTitleProps): JSX.Element => (
   <>
     <text
-      textAnchor="middle"
-      x={175}
-      y={-34}
+      textAnchor="start"
+      x="-20%"
+      y={-44}
       style={{ fontSize: 14, fill: "#eee", fontWeight: 600 }}
     >
       {title}
     </text>
     <text
-      textAnchor="middle"
-      x={144}
-      y={-18}
+      textAnchor="start"
+      x="-20%"
+      y={-28}
       style={{ fontSize: 12, fill: "#888", fontWeight: 600 }}
     >
       {subtitle}
