@@ -106,14 +106,14 @@ const Link = styled(LinkComponent)<{
   :hover {
     background: ${({ normal, primary, secondary, tag, tertiary }) => {
       if (normal) return "transparent";
-      if (primary) return "#d7eaff";
+      if (primary) return "#eee";
       if (secondary) return "#0076ff";
       if (tertiary) return "#1e1e1e";
       if (tag) return "#0066dc";
       return "#015eca";
     }};
     border: ${({ active, normal, primary, secondary, tag, tertiary }) => {
-      if (active) return "1px solid #8caffb";
+      if (active) return "1px solid transparent";
       if (normal || tag) return "0";
       if (primary) return "1px solid transparent";
       if (secondary) return "1px solid #0076ff";
