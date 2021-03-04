@@ -43,7 +43,7 @@ const Button = styled(StyledButton)<{
     if (primary) return "#0076ff";
     if (danger) return "#e60f00";
     if (transparent) return "transparent";
-    return "#000";
+    return "#1e1e1e";
   }};
   border: 1px solid
     ${({ danger, primary }) => {
@@ -74,7 +74,7 @@ const Button = styled(StyledButton)<{
       if (primary) return "#006ae6";
       if (danger) return "#d71002";
       if (transparent) return "transparent";
-      return "#000";
+      return "#1e1e1e";
     }};
     box-shadow: 0 4px 14px 0
       ${({ danger, primary, transparent }) => {
