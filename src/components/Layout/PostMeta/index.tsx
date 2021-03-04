@@ -30,6 +30,7 @@ export interface PostMetaState {
 export interface PostMetaProps {
   avatar?: string;
   date?: string;
+  description?: string;
   username: string;
   showViews: boolean;
   updated?: string;
@@ -69,6 +70,7 @@ class PostMeta extends React.Component<PostMetaProps, PostMetaState> {
         user: {
           avatar: this.props.avatar,
           description:
+            this.props.description ||
             "Proin eget tortor risus. Nulla porttitor accumsan tincidunt. Sed porttitor lectus nibh. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta.",
           username: this.props.username,
           website: ""

@@ -55,6 +55,7 @@ const GuidesPage = (): JSX.Element => (
             <PostMeta
               username="Steve Burke"
               avatar="steveBurke.jpg"
+              description={`I started GamersNexus back when it was just a cool name, and now it's grown into an expansive website with an overwhelming amount of features. He recalls his first difficult decision with GN's direction: "I didn't know whether or not I wanted 'Gamers' to have a possessive apostrophe -- I mean, grammatically it should, but I didn't like it in the name. It was ugly. I also had people who were typing apostrophes into the address bar - sigh. It made sense to just leave it as 'Gamers.'" First world problems, Steve. First world problems.`}
               views={0}
               date={String(new Date(2020, 5, 28, 2, 49, 0, 0))}
               showViews
